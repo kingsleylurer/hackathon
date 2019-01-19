@@ -1,0 +1,37 @@
+{
+  "name": "Swamp Vibez",
+  "manifest_version": 2,
+  "version": "5.1.14",
+  "icons": {
+    "16": "assets/icon16.png",
+    "128": "assets/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*", "http://*/*"
+      ],
+      "js": ["polyfill.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "assets/icons.woff",
+    "visor.js",
+    "js/*.js"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "activeTab",
+    "tabs",
+    "<all_urls>",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "assets/icon16.png",
+    "default_popup": "popup.html"
+  }
+}
