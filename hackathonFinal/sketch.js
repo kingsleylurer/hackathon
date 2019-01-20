@@ -37,7 +37,7 @@ push();
   //  text(advertisementX, width/2, height/2+10);
     translate(-advertisementY,0);
    // image(img, width, height);
-    text(advertisement[x], width/2, height/2+10);
+    text(advertisement[x%4], width/2, height/2+10);
     push();
     translate((width),0);
    // image(img, width, height);
